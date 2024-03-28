@@ -8,19 +8,19 @@
 
 void choice(){
  using namespace std;
- cout << "Enter ch for choices.\n";
+ cout << "//Enter ch for choices.\n";
  cout << "//Enter cy for what's needed to copy and paste to finish a simple program.\n";
  cout << "//Enter s for strings.\n";
  cout << "//Enter c for empty strings.\n";
  cout << "//Enter aa for string arrays.\n";
  cout << "//Enter i for if statements for strings.\n";
- cout << "Enter e for else if statements for strings.\n";
+ cout << "//Enter e for else if statements for strings.\n";
  cout << "//Enter in for if and else if statements for numbers.\n";
  cout << "//Enter fc for void functions.\n";
- cout << "Enter cf to call functions.\n",
- cout << "Enter u for user input.\n"; 
- cout << "Enter v for string variables.\n";
- cout << "Enter vv for string variables to assign a value.\n";
+ cout << "//Enter cf to call functions.\n",
+ cout << "//Enter u for user input.\n"; 
+ cout << "//Enter v for string variables.\n";
+ cout << "//Enter vv for string variables to assign a value.\n";
  cout << "//Enter vi for int and double variables.\n";
  cout << "//Enter vn for int and double variables with no value.\n";
  }
