@@ -1,20 +1,20 @@
 def choice():
     print('''
-             //Enter ch for choices.
-             //Enter cy for what's needed to copy and paste to finish a simple program.
-             //Enter s for strings.
-             //Enter c for empty strings.
-             //Enter aa for string arrays.
-             //Enter i for if statements for strings.
-             //Enter e for else if statements for strings.
-             //Enter in for if and else if statements for numbers.
-             //Enter fc for void functions.
-             //Enter cf to call functions.
-             //Enter u for user input.
-             //Enter v for string variables.
-             //Enter vv for string variables to assign a value.
-             //Enter vi for int and double variables.
-             //Enter vn for int and double variables with no value. ''')
+//Enter ch for choices.
+//Enter cy for what's needed to copy and paste to finish a simple program.
+//Enter s for strings.
+//Enter c for empty strings.
+//Enter aa for string arrays.
+//Enter i for if statements for strings.
+//Enter e for else if statements for strings.
+//Enter in for if and else if statements for numbers.
+//Enter fc for void functions.
+//Enter cf to call functions.
+//Enter u for user input.
+//Enter v for string variables.
+//Enter vv for string variables to assign a value.
+//Enter vi for int and double variables.
+//Enter vn for int and double variables with no value. ''')
 
 
 choice()
