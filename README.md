@@ -8,7 +8,7 @@ productivity.
 
 
 **To Use:**
-First compile the .cpp file. To run the program open the terminal
+First compile the .c file. To run the program open the terminal
 and type ./file name  then press enter. Choices will be shown on screen.
 To do a if statement for strings press enter. follow instructions.
 Everything the program does is in choices.
