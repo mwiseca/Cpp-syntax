@@ -5,3 +5,9 @@ A Python version has been added. its in the python branch.
 March 28 2024.
 A C version was added to the the C branch.
 April 2 2024.
+Start a map was added. It starts a map with one key value pair.
+Check mp in choices.
+Check }else if(sw == "mp"){ to see code.
+A #include <map> and try catch out_of_range exception was added
+to cy.
+April 7 2024.
