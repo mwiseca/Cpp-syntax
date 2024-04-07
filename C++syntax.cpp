@@ -18,7 +18,8 @@ void choice(){
  cout << "//Enter in for if and else if statements for numbers.\n";
  cout << "//Enter fc for void functions.\n";
  cout << "//Enter cf to call functions.\n",
- cout << "//Enter u for user input.\n"; 
+ cout << "//Enter u for user input.\n";
+ cout << "//Enter mp to start a map with one key value pair.\n"; 
  cout << "//Enter v for string variables.\n";
  cout << "//Enter vv for string variables to assign a value.\n";
  cout << "//Enter vi for int and double variables.\n";
@@ -199,6 +200,73 @@ int main(){
    std::cout << "\nstd::cin.clear();";
    std::cout << "\nstd::cin.ignore(2000, '\\n');     //Clears input buffer.\n\n";
    }
+}else if(sw == "mp"){
+ std::string t [8] = {"std::map","<","std::string","int","double","> ",",", " = {"};
+ std::string b [7] = {"    {", "}," , "}", "};", "\"", ","," "};
+                 std::string key_type;
+		 std::string value_type;
+		 std::string name;
+		 std::string key;
+		 std::string key_t;
+		 std::string value;
+		 std::string value_t;
+		 
+ while(true){
+ std::cout << "//Enter the name of the map m for main.\n";
+ std::cout << "//";
+ getline(std::cin,name);
+ if(name == "m"){
+ break;}
+ std::cout << "//Enter a key type, s for string, i for int d for double.\n";
+ std::cout << "//";
+ getline(std::cin,key_type);
+ if(key_type != "s" && key_type != "i" && key_type != "d"){
+ std::cout << "Enter s i or d only.\n";
+ continue;}
+ if(key_type == "s"){
+ key_type = t[2];
+}else if(key_type == "i"){
+ key_type = t[3];
+}else if(key_type == "d"){
+ key_type = t[4];}
+ std::cout << "//Enter a value type, s for string, i for int d for double.\n";
+ std::cout << "//";
+ while(getline(std::cin, value_type)){
+ if(value_type != "s" && value_type != "i" && value_type != "d"){
+ std::cout << "//Enter s i or d only.\n";}
+ else{
+     break;}
+ }
+ if(value_type == "s"){
+ value_type = t[2];
+}else if(value_type == "i"){
+ value_type = t[3];
+}else if(value_type == "d"){
+ value_type = t[4];}
+ std::cout << "//Enter a key.\n";
+ std::cout << "//";
+ getline(std::cin,key);
+ std::cout << "//Enter s if key is a string.\n";
+ std::cout << "//";
+ getline(std::cin,key_t); 
+ std::cout << "//Enter a value.\n";
+ std::cout << "//";
+ getline(std::cin,value);
+ std::cout << "//Enter s if the value is a string.\n";
+ std::cout << "//";
+ getline(std::cin,value_t);
+ std::cout <<  "\n" << t[0] << t[1] << key_type << t[6] << value_type << t[5] << name <<  t[7] << "\n";  
+ if(key_t == "s"){
+ std::cout << b[0] << b[4] << key << b[4] << b[5] <<  b[6];
+}else if(key_t != "s"){
+ std::cout << b[0] << key << b[5] << b[6];}
+ if(value_t == "s"){
+ std::cout << b[4] << value <<  b[4] << b[1] << "\n";
+}else if(value_t != "s"){
+ std::cout << value << b[1] << "\n";
+ std::cout << b[3] << "\n\n"; 
+        } 
+    } 
 }else if(sw == "v"){
      std::string f  [2] = {"std::string ",";"};
      std::string name;
@@ -283,6 +351,8 @@ std::cout << "\n"<< t[0] << name << t[2] << "\n\n";
  std::cout << "\n";
  std::cout << "#include <string>\n";
  std::cout << "\n";
+ std::cout << "#include <map>\n";
+ std::cout << "\n";
  std::cout << "int main(){\n";
  std::cout << "\n";
  std::cout << "while(true){\n"; 
@@ -298,6 +368,10 @@ std::cout << "\n"<< t[0] << name << t[2] << "\n\n";
  std::cout << "continue;\n";
  std::cout << "\n";
  std::cout << "continue;}\n";
+ std::cout << "\n";
+ std::cout << "try{\n";
+ std::cout<< "\n";
+ std::cout << "}catch(std::out_of_range){\n";
  std::cout << "\n";
  std::cout << "        }\n";
  std::cout << "}\n";
