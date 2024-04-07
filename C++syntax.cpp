@@ -19,7 +19,8 @@ void choice(){
  cout << "//Enter fc for void functions.\n";
  cout << "//Enter cf to call functions.\n",
  cout << "//Enter u for user input.\n";
- cout << "//Enter mp to start a map with one key value pair.\n"; 
+ cout << "//Enter mp to start a map with one key value pair.\n";
+ cout << "//Enter ma for map access.\n"; 
  cout << "//Enter v for string variables.\n";
  cout << "//Enter vv for string variables to assign a value.\n";
  cout << "//Enter vi for int and double variables.\n";
@@ -266,7 +267,28 @@ int main(){
  std::cout << value << b[1] << "\n";
  std::cout << b[3] << "\n\n"; 
         } 
-    } 
+    }
+}else if(sw == "ma"){
+  std::string t [9] = {"std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"};
+             std::string var;
+	     std::string name;
+ while(true){
+ std::cout << "//Enter the name of the map m for main.\n";
+ std::cout << "//";
+ getline(std::cin,name);
+ if(name == "m"){
+ break;}
+ std::cout << "//Enter the name of the variable.\n";
+ std::cout << "//";
+ getline(std::cin,var);
+ std::cout << "\n" << t[0] << name << t[5] << var << t[6] << t[3] << "\n\n";
+ std::cout << "\n" << t[0] << name << t[7] << var << t[8] << t[3] << "\n\n";
+ std::cout << "\n" << name << t[5] << var << t[6] << "     // Use with try catch.\n\n";
+ std::cout << "\n" << name << t[7] << var << t[8] << "\n\n";
+ std::cout << "\n }" << "\n\n";
+ std::cout << "\n" << "try{" << "\n\n";
+ std::cout << "\n" << "}catch(std::out_of_range){" << "    //For map key error.\n\n"; 
+ }
 }else if(sw == "v"){
      std::string f  [2] = {"std::string ",";"};
      std::string name;
