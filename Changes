@@ -11,3 +11,7 @@ Check }else if(sw == "mp"){ to see code.
 A #include <map> and try catch out_of_range exception was added
 to cy.
 April 7 2024.
+Map access was added.
+check ma in choices.
+Check }else if(sw == "ma"){ to see code.
+April 7 2024.
