@@ -264,9 +264,8 @@ int main(){
  if(value_t == "s"){
  std::cout << b[4] << value <<  b[4] << b[1] << "\n";
 }else if(value_t != "s"){
- std::cout << value << b[1] << "\n";
- std::cout << b[3] << "\n\n"; 
-        } 
+ std::cout << value << b[1] << "\n";}
+ std::cout << b[3] << "\n\n";  
     }
 }else if(sw == "ma"){
   std::string t [9] = {"std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"};
