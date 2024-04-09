@@ -15,3 +15,9 @@ Map access was added.
 check ma in choices.
 Check }else if(sw == "ma"){ to see code.
 April 7 2024.
+In if statements for numbers choose a operator was changed to not start over
+if a wrong letter was chosen.
+Check in in choices.
+Check }else if sw == "in"){ to see code.
+April 8 2024.
+
