@@ -131,11 +131,12 @@ int main(){
  break;} 
  std::cout << "//Enter an operator, a for less than, b for equal to, c for greater than, d for not equal\n";
  std::cout << "//";
- getline(std::cin,op);
+ while(getline(std::cin,op)){
  if(op != "a" && op != "b" && op!= "c" && op != "d"){
- std::cout << "//Enter a or b or c or d only.\n";
- std::cout << "//Start over.\n";
- continue;}
+ std::cout << "//Enter a or b or c or d only.\n";}
+ else{
+     break;}
+ }
  if(op == "a"){
    op = t[2];
 }else if(op == "b"){
