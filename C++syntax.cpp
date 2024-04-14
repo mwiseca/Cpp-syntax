@@ -272,6 +272,8 @@ int main(){
   std::string t [9] = {"std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"};
              std::string var;
 	     std::string name;
+             std::string text;
+	     std::string em;
  while(true){
  std::cout << "//Enter the name of the map m for main.\n";
  std::cout << "//";
@@ -281,6 +283,11 @@ int main(){
  std::cout << "//Enter the name of the variable.\n";
  std::cout << "//";
  getline(std::cin,var);
+ std::cout << "To enter a key error message for exception press e.\n";
+ std::cout << "//Press enter to not enter a error message.\n";
+ std::cout << "//";
+ getline(std::cin,em);
+ if(em != "e"){ 
  std::cout << "\n" << t[0] << name << t[5] << var << t[6] << t[3] << "\n\n";
  std::cout << "\n" << t[0] << name << t[7] << var << t[8] << t[3] << "\n\n";
  std::cout << "\n" << name << t[5] << var << t[6] << "     // Use with try catch.\n\n";
@@ -288,7 +295,19 @@ int main(){
  std::cout << "\n }" << "\n\n";
  std::cout << "\n" << "try{" << "\n\n";
  std::cout << "\n" << "}catch(std::out_of_range){" << "    //For map key error.\n\n"; 
- }
+ }else if(em == "e"){
+ std::cout << "//Enter error message.\n";
+ std::cout << "//";
+ getline(std::cin,text);
+ std::cout << "\n" << t[0] << name << t[5] << var << t[6] << t[3] << "\n\n";
+ std::cout << "\n }" << "\n\n";
+ std::cout << "\n" << "try{" << "\n\n";
+ std::cout << "}catch(std::out_of_range){" << "\n";  
+ std::cout << string[0] <<  text << string[1] << string[2] << "\n\n";
+ std::cout << "}catch(std::out_of_range){" << "\n";  
+ std::cout << string[0] <<  text << string[3] << "\n\n";
+     }
+} 
 }else if(sw == "v"){
      std::string f  [2] = {"std::string ",";"};
      std::string name;
