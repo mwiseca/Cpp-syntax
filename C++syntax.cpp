@@ -270,6 +270,7 @@ int main(){
     }
 }else if(sw == "ma"){
   std::string t [9] = {"std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"};
+  std::string string  [4] = {" std::cout << \"", "\\n","\";}","\" << std::endl;}"};
              std::string var;
 	     std::string name;
              std::string text;
