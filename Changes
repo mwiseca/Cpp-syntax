@@ -7,4 +7,10 @@ A C version was added to the C branch.
 April 2 2024.
 Start a map was added. It starts a map with one key value pair.
 Check mp in choices.
+Check else if(strcmp(sw, "mp")==0){ to see code.
+April 15 2024.
+In if statements for numbers choose a operator was changed to not start over
+if a wrong letter was chosen.
+Check in in choices.
+Check }else if(strcmp(sw, "in")==0){ to see code.
 April 15 2024.
