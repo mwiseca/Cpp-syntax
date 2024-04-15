@@ -18,6 +18,7 @@ printf("//Enter in for if and else if statements for numbers.\n");
 printf("//Enter fc for void functions.\n");
 printf("//Enter cf to call functions.\n");
 printf("//Enter u for user input.\n");
+printf("//Enter mp to start a map with one key value pair.\n");
 printf("//Enter v for string variables.\n");
 printf("//Enter vv for string variables to assign a value.\n");
 printf("//Enter vi for int and double variables.\n");
@@ -246,6 +247,79 @@ choice();
  value[strcspn(value,"\n")]=0;
  printf("\n%s%s%s%s%s%s%s\n\n", v[0] , name , v[1] ,  v[2] , value , v[2] , v[3]);
  }
+}else if(strcmp(sw, "mp")==0){ 
+  char t [8] [20] = {"std::map","<","std::string","int","double","> ",",", " = {"};
+ char b [7]  [15] = {"    {", "}," , "}", "};", "\"", ","," "};
+                 char key_type [2000];
+		 char value_type [2000];
+		 char name [2000];
+		 char key [2000];
+		 char key_t [2000];
+		 char value [2000];
+		 char value_t [2000];
+		 
+ while(1){
+ printf("//Enter the name of the map m for main.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if(strcmp(name,"m")==0){
+ break;}
+ printf("//Enter a key type, s for string, i for int d for double.\n");
+ printf("//");
+ fgets(key_type,2000,stdin);
+ key_type[strcspn(key_type,"\n")]=0;
+if(strcmp(key_type,"s")!=0 && strcmp(key_type,"i")!=0 && strcmp(key_type, "d")!=0){
+ printf("Enter s i or d only.\n");
+ continue;}
+ if(strcmp(key_type,"s")==0){
+ strcpy(key_type,t[2]);
+}else if(strcmp(key_type, "i")==0){
+ strcpy(key_type,t[3]);
+}else if(strcmp(key_type,"d")==0){
+ strcpy(key_type,t[4]);}
+ printf("//Enter a value type, s for string, i for int d for double.\n");
+ printf("//");
+ while(fgets(value_type,2000,stdin)){
+       value_type[strcspn(value_type,"\n")]=0;
+ if(strcmp(value_type,"s")!=0 && strcmp(value_type, "i")!=0 && strcmp(value_type, "d")!=0){
+ printf("//Enter s i or d only.\n");}
+ else{
+     break;}
+ }
+ if(strcmp(value_type,"s")==0){
+ strcpy(value_type,t[2]);
+}else if(strcmp(value_type,"i")==0){
+ strcpy(value_type,t[3]);
+}else if(strcmp(value_type,"d")==0){
+ strcpy(value_type,t[4]);}
+ printf("//Enter a key.\n");
+ printf("//");
+ fgets(key,2000,stdin);
+ key[strcspn(key,"\n")]=0;
+ printf("//Enter s if key is a string.\n");
+ printf("//");
+ fgets(key_t,2000,stdin);
+ key_t[strcspn(key_t,"\n")]=0; 
+ printf("//Enter a value.\n");
+ printf("//");
+ fgets(value,2000,stdin);
+ value[strcspn(value,"\n")]=0;
+ printf("//Enter s if the value is a string.\n");
+ printf("//");
+ fgets(value_t,2000,stdin);
+ value_t[strcspn(value_t, "\n")]=0;
+ printf("\n%s%s%s%s%s%s%s%s\n",t[0], t[1], key_type, t[6], value_type , t[5] , name, t[7]);  
+ if(strcmp(key_t, "s")==0){
+ printf("%s%s%s%s%s%s", b[0] , b[4] , key , b[4] , b[5] ,  b[6]);
+}else if(strcmp(key_t,"s")!=0){
+ printf("%s%s%s%s", b[0] , key , b[5], b[6]);}
+ if(strcmp(value_t, "s")==0){
+ printf("%s%s%s%s\n", b[4] , value , b[4] , b[1]);
+}else if(strcmp(value_t,"s")!=0){
+ printf("%s%s\n", value , b[1]);}
+ printf("%s\n\n", b[3]);  
+    }
 }else if(strcmp(sw,"vi")==0){
          char t [5] [15] = {"double ","int "," = ", ";", " ;"};
         char ch [2000];
