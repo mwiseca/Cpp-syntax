@@ -14,3 +14,11 @@ if a wrong letter was chosen.
 Check in in choices.
 Check }else if(strcmp(sw, "in")==0){ to see code.
 April 15 2024.
+The cy selection was updated for maps. #include <map>, try{,and }catch(std::out_of_range){
+was added.
+Check cy in choices.
+April 16 2024.
+Map access was added.
+check ma in choices.
+Check }else if(strcmp(sw, "ma")==0){ to see code.
+April 16 2024.
