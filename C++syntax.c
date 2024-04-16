@@ -19,6 +19,7 @@ printf("//Enter fc for void functions.\n");
 printf("//Enter cf to call functions.\n");
 printf("//Enter u for user input.\n");
 printf("//Enter mp to start a map with one key value pair.\n");
+printf("//Enter ma for map access.\n");
 printf("//Enter v for string variables.\n");
 printf("//Enter vv for string variables to assign a value.\n");
 printf("//Enter vi for int and double variables.\n");
@@ -319,10 +320,54 @@ if(strcmp(key_type,"s")!=0 && strcmp(key_type,"i")!=0 && strcmp(key_type, "d")!=
  printf("%s%s%s%s\n", b[4] , value , b[4] , b[1]);
 }else if(strcmp(value_t,"s")!=0){
  printf("%s%s\n", value , b[1]);}
- printf("%s\n\n", b[3]);  
-    }
+ printf("%s\n\n", b[3]);
+}else if(strcmp(sw, "ma")==0){
+   char t [9][20] = {"std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"};
+  char string [4] [20] = {" std::cout << \"", "\\n","\";}","\" << std::endl;}"};
+             char var [2000];
+	     char name [2000];
+             char text [2000];
+	     char em [2000];
+ while(1){
+ printf("//Enter the name of the map m for main.\n");
+ printf("//");
+ fgets(name,2000,stdin);
+ name[strcspn(name,"\n")]=0;
+ if(strcmp(name, "m")==0){
+ break;}
+ printf("//Enter the name of the variable.\n");
+ printf("//");
+ fgets(var,2000,stdin);
+ var[strcspn(var,"\n")]=0;
+ printf("To enter a key error message for exception press e.\n");
+ printf("//Press enter to not enter a error message.\n");
+ printf("//");
+ fgets(em,2000,stdin);
+ em[strcspn(em,"\n")]=0;
+ if(strcmp(em, "e")!=0){ 
+ printf("\n%s%s%s%s%s%s\n\n" , t[0] , name , t[5] , var, t[6] , t[3]);
+ printf("\n%s%s%s%s%s%s\n\n", t[0] , name , t[7] , var , t[8], t[3]);
+ printf("\n%s%s%s%s      //Use with try catch.\n\n",  name , t[5] , var ,t[6]);
+ printf("\n%s%s%s%s\n\n", name , t[7] , var , t[8]);
+ printf("\n } \n\n");
+ printf("\ntry{ \n\n");
+ printf("\n }catch(std::out_of_range){      //For map key error.\n\n"); 
+ }else if(strcmp(em, "e")==0){
+ printf("//Enter error message.\n");
+ printf("//");
+ fgets(text,2000,stdin);
+ text[strcspn(text,"\n")]=0;
+ printf("\n%s%s%s%s%s%s\n\n", t[0] , name , t[5] ,var ,t[6] , t[3]);
+ printf("\n}\n\n");
+ printf("\ntry{\n\n");
+ printf("}catch(std::out_of_range){\n");  
+ printf("%s%s%s%s\n\n",string[0] , text , string[1] , string[2]);
+ printf("}catch(std::out_of_range){\n");  
+ printf("%s%s%s\n\n", string[0] ,  text , string[3]);
+     }
+}  
 }else if(strcmp(sw,"vi")==0){
-         char t [5] [15] = {"double ","int "," = ", ";", " ;"};
+        char t [5] [15] = {"double ","int "," = ", ";", " ;"};
         char ch [2000];
         char name [2000];
         char value [2000];
@@ -382,6 +427,8 @@ if(strcmp(key_type,"s")!=0 && strcmp(key_type,"i")!=0 && strcmp(key_type, "d")!=
  printf("\n");
  printf("#include <string>\n");
  printf("\n");
+ printf("#include <map>\n");
+ printf("\n"); 
  printf("int main(){\n");
  printf("\n");
  printf("while(true){\n");
@@ -397,6 +444,10 @@ if(strcmp(key_type,"s")!=0 && strcmp(key_type,"i")!=0 && strcmp(key_type, "d")!=
  printf("continue;\n");
  printf("\n");
  printf("continue;}\n");
+ printf("\n");
+ printf("try{\n");
+ printf("\n");
+ printf("}catch(std::out_of_range){\n");
  printf("\n");
  printf("        }\n");
  printf("}\n");
