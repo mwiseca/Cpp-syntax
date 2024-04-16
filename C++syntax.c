@@ -321,6 +321,7 @@ if(strcmp(key_type,"s")!=0 && strcmp(key_type,"i")!=0 && strcmp(key_type, "d")!=
 }else if(strcmp(value_t,"s")!=0){
  printf("%s%s\n", value , b[1]);}
  printf("%s\n\n", b[3]);
+ }
 }else if(strcmp(sw, "ma")==0){
    char t [9][20] = {"std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"};
   char string [4] [20] = {" std::cout << \"", "\\n","\";}","\" << std::endl;}"};
