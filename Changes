@@ -1,26 +1,2 @@
-Cpp syntax was built entirly with C-strings code.
-The arrays and other code was changed to write c++ code.
-march 14 2024.
-A Python version has been added. its in the python branch.
-March 28 2024.
-A C version was added to the the C branch.
-April 2 2024.
-Start a map was added. It starts a map with one key value pair.
-Check mp in choices.
-Check }else if(sw == "mp"){ to see code.
-A #include <map> and try catch out_of_range exception was added
-to cy.
-April 7 2024.
-Map access was added.
-check ma in choices.
-Check }else if(sw == "ma"){ to see code.
-April 7 2024.
-In if statements for numbers choose a operator was changed to not start over
-if a wrong letter was chosen.
-Check in in choices.
-Check }else if sw == "in"){ to see code.
-April 8 2024.
-An error message option was added to map access.
-Check ma in choices.
-April 14 2014.
-
+Two versions with choices as functions. One above main and one below main.
+April 21 2014.
