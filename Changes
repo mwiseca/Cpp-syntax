@@ -5,3 +5,6 @@ A python version was added to the Python branch.
 march 28 2024.
 A C version was added to the C branch.
 April 2 2024.
+A version with choices in functions was added.
+It calls functions in a dictionary instead of a if elif statement.
+April 30 2024.
