@@ -76,8 +76,8 @@ while True:
         while True:
             print("//Enter i for if statement. Enter e for else if.")
             select = input("//")
-            if select != "s" and select != "i" and select != "e": 
-                print("//Enter s or i or e only.")
+            if select != "i" and select != "e": 
+                print("//Enter i or e only.")
                 continue
             print("//Enter the name of if or else if statement. Enter m for main.")
             var = input("//")
