@@ -15,6 +15,8 @@ def choice():
 //Enter fc for void functions.
 //Enter cf to call functions.
 //Enter u for user input.
+//Enter mp to start a map with one key value pair.
+//Enter ma for map access.
 //Enter v for string variables.
 //Enter vv for string variables to assign a value.
 //Enter vi for int and double variables.
@@ -73,7 +75,7 @@ def ifstatement():
 def elseif():
     f = ["else if(", " == ",  '"', "){"]
     while True:
-        print("//Enter name of the if statement m for main.")
+        print("//Enter name of the else if statement m for main.")
         name = input("//")
         if name == "m":
             return ""
@@ -155,8 +157,98 @@ def userInput():
         print("\n" + f[5] +  v + f[6]  + "\n\n")
         print("\nstd::cin.clear();")
         print("std::cin.ignore(2000, '\\n');     //Clears input buffer.\n")
-    
-    
+
+
+def mapp():
+    t = ["std::map","<","std::string","int","double","> ",",", " = {"]
+    b = ["    {", "}," , "}", "};", "\"", ","," "]
+
+    while True:
+        print("//Enter the name of the map m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter a key type, s for string, i for int d for double.")
+        key_type = input("//")
+        if key_type != "s" and key_type != "i" and key_type != "d":
+            print("Enter s i or d only.\n")
+            continue
+        if key_type == "s":
+            key_type = t[2]
+        elif key_type == "i":
+            key_type = t[3]
+        elif key_type == "d":
+            key_type = t[4]
+        print("//Enter a value type, s for string, i for int d for double.")
+        while True:
+            value_type = input("//")
+            if value_type != "s" and value_type != "i" and value_type != "d":
+                print("//Enter s i or d only.")
+            else:
+                break
+        if value_type == "s":
+            value_type = t[2]
+        elif value_type == "i":
+            value_type = t[3]
+        elif value_type == "d":
+            value_type = t[4]
+        print("//Enter a key.\n")
+        key = input("//")
+        print("//Enter s if key is a string.")
+        key_t = input("//")
+        print("//Enter a value.")
+        value = input("//")
+        print("//Enter s if the value is a string.")
+        value_t = input("//")
+        print("\n" +  t[0] + t[1] + key_type + t[6] + value_type + t[5] + name +  t[7])
+        if key_t == "s" and value_t == "s":
+            print(b[0] + b[4] + key + b[4] + b[5] + b[6] + b[4] + value + b[4] + b[1])
+            print(b[3] + "\n")
+        elif key_t != "s" and value_t != "s":
+            print(b[0] + key + b[5]  + b[6] + value + b[1])
+            print(b[3] + "\n")
+        elif key_t == "s" and value_t != "s":
+            print(b[0] + b[4]   + key + b[4] +  b[5] + b[6] + value + b[1])
+            print(b[3] + "\n")
+        if value_t == "s" and key_t != "s":
+            print(b[0] + key + b[5] + b[6] +  b[4] + value + b[4] + b[1])
+            print(b[3] + "\n")
+
+
+def mapAccess():
+    t = ["std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"]
+    string = [" std::cout << \"", "\\n","\";}","\" << std::endl;}"]
+             
+    while True:
+        print("//Enter the name of the map m for main.")
+        name = input("//")
+        if name == "m":
+            return ""
+        print("//Enter the name of the variable.")
+        var = input("//")
+        print("To enter a key error message for exception press e.")
+        print("//Press enter to not enter a error message.")
+        em = input("//")
+        if em != "e": 
+            print("\n"+ t[0] + name + t[5] + var + t[6] + t[3] + "\n")
+            print("\n" + t[0] + name + t[7] + var + t[8] + t[3] + "\n")
+            print("\n" + name + t[5] + var + t[6] + "     // Use with try catch.\n")
+            print("\n" + name + t[7] + var + t[8] + "\n")
+            print("\n }" + "\n")
+            print("\n" +  "try{\n")
+            print("\n" + "}catch(std::out_of_range){" +  "    //For map key error.\n") 
+        elif em == "e":
+            print("//Enter error message.")
+            text = input("//")
+            print("\n"+ t[0] + name + t[5] + var + t[6] + t[3] + "\n")
+            print("\n }" + "\n")
+            print("\n" + "try{" + "\n")
+            print("}catch(std::out_of_range){")  
+            print(string[0] +  text + string[1] + string[2] + "\n")
+            print("}catch(std::out_of_range){") 
+            print(string[0] +  text + string[3] + "\n")
+     
+
 def variable():
     f = ["std::string ",";"]	
     while True:
@@ -262,6 +354,8 @@ functions = {
     "fc": func,
     "cf": callfunc,
     "u": userInput,
+    "mp": mapp,
+    "ma":mapAccess,
     "v": variable,
     "vv": variableValue,
     "vi": variableNum,
