@@ -8,3 +8,11 @@ April 2 2024.
 A version with choices in functions was added.
 It calls functions in a dictionary instead of a if elif statement.
 April 30 2024.
+Start a map with one key value pair was added to the F file.
+Enter mp to use it.
+Check function mapp to see code.
+may 1 2024.
+A map access function was added.
+Enter ma to use it.
+check function mapAccess to see code.
+may 1 2024.
