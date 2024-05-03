@@ -73,7 +73,7 @@ def ifstatement():
     
     
 def elseif():
-    f = ["else if(", " == ",  '"', "){"]
+    f = ["}else if(", " == ",  '"', "){"]
     while True:
         print("//Enter name of the else if statement m for main.")
         name = input("//")
@@ -316,6 +316,8 @@ def copy():
         print("\n")
         print("#include <string>")
         print("\n")
+        print("#include <map>")
+        print("\n")
         print("int main(){")
         print("\n")
         print("while(true){")
@@ -331,6 +333,10 @@ def copy():
         print("continue;")
         print("\n")
         print("continue;}")
+        print("\n")
+        print("try{")
+        print("\n")
+        print("}catch(std::out_of_range){")
         print("\n")
         print("        }")
         print("}")
