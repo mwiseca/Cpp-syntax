@@ -145,7 +145,7 @@ def callfunc():
         print("\n" + name + t[0] + per + t[1] + "\n")
 
     
-def userInput():
+def user_input():
     f = ["std::","getline(","std::cin", ",", ");","std::cin >> ",";"]  
     while True:
         print("//Enter name of variable m for main.")
@@ -215,7 +215,7 @@ def mapp():
             print(b[3] + "\n")
 
 
-def mapAccess():
+def map_access():
     t = ["std::cout << ",  "\\n", "\""," << std::endl;", ";", ".at(", ")","[","]"]
     string = [" std::cout << \"", "\\n","\";}","\" << std::endl;}"]
              
@@ -259,7 +259,7 @@ def variable():
         print("\n" + f[0] + name + f[1] + "\n")
         
         
-def variableValue():    
+def variable_value():    
     t = ["std::string "," = ","\"",";"]
     while True:
         print("//Enter a name of variable m for main.")
@@ -271,7 +271,7 @@ def variableValue():
         print("\n" + t[0] + name + t[1] + t[2] + value + t[2] + t[3] + "\n")
 
 
-def variableNum():
+def variable_num():
     t = ["double ","int "," = ", ";", " ;"]
     while True:
         print("//Choose i for int d for double, m for main.")
@@ -291,7 +291,7 @@ def variableNum():
             print("\n" + t[0] +name + t[2] + value + t[3] + "\n")
     
     
-def varNoValue():
+def var_no_value():
     t = ["double ","int ", ";"]
     while True:
         print("//Choose i for int d for double, m for main.")
@@ -359,13 +359,13 @@ functions = {
     "in": ifnum,
     "fc": func,
     "cf": callfunc,
-    "u": userInput,
+    "u": user_input,
     "mp": mapp,
-    "ma":mapAccess,
+    "ma":map_access,
     "v": variable,
-    "vv": variableValue,
-    "vi": variableNum,
-    "vn": varNoValue,
+    "vv": variable_value,
+    "vi": variable_num,
+    "vn": var_no_value,
     "cy": copy
 }
 
