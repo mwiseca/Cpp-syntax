@@ -476,7 +476,8 @@ std::map<std::string, std::function<void()> > f = {
            std::string sw;
  choice(); 
  while(true){
- std::cout << "Enter a selection from choices x to exit ch for choices.\n";
+ std::cout << "//Enter a selection from choices x to exit ch for choices.\n";
+ std::cout << "//";
  std::getline(std::cin,sw);
  if(sw == "x"){
  break;}
@@ -485,7 +486,7 @@ std::map<std::string, std::function<void()> > f = {
  //c->second();}
  (*c) .second();}
  else{
-     std::cout << "Enter a letter in choices\n\n";}
+     std::cout << "//Enter a letter in choices\n\n";}
  }
 return 0;
 }
