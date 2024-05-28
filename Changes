@@ -25,4 +25,6 @@ Check ma in choices.
 April 14 2014.
 A new file was added cppsyntax.map.cpp. It uses a map and functions as values.
 this eliminates the if else if statement to switch choices.
+To use the -> to dereference the pointer uncomment c->second();}
+and comment out (*c) .second();}.
 May 28 2024.
