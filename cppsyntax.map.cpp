@@ -453,8 +453,7 @@ void copy(){
 
 
 int main(){               
-std::map<std::string, std::function<void()> > f =
-     {
+std::map<std::string, std::function<void()> > f = { 
 	 {"ch",        choice},
 	 {"cy",          copy},
 	 {"s",         string},
