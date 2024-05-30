@@ -482,7 +482,7 @@ std::map<std::string, std::function<void()> > f = {
  if(sw == "x"){
  break;}
  auto c = f.find(sw);
- if( c != f.end()){
+ if(c != f.end()){
  //c->second();}
  (*c) .second();}
  else{
