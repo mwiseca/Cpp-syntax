@@ -39,8 +39,9 @@ void string(){
  getline(std::cin,text);
  if(text == "m"){
  break;}
- std::cout << "\n" << string[0] <<  text << string[1] << string[2] << "\n\n";
- std::cout << "\n" << string[0] <<  text << string[3] << "\n\n";}
+ std::cout << "\n" << string[0] << text << string[1] << string[2] << "\n\n";
+ std::cout << "\n" << string[0] << text << string[2] << "\n\n";
+ std::cout << "\n" << string[0] << text << string[3] << "\n\n";}
 }
 
 
