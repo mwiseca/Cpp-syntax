@@ -484,7 +484,6 @@ std::map<std::string, std::function<void()> > f = {
  break;}
  auto c = f.find(sw);
  if(c != f.end()){
- //c->second();}
  (*c) .second();}
  else{
      std::cout << "//Enter a letter in choices\n\n";}
