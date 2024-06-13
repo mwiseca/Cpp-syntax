@@ -394,6 +394,7 @@ void variableNum(){
  getline(std::cin,value); 
  if(ch == "i"){
  std::cout << "\n" << t[1] << name << t[2] << value << t[3] << "\n\n"; 
+ break;
 }else if(ch == "d"){
 std::cout << "\n" << t[0] << name << t[2] << value << t[3] <<  "\n\n";
 break;}
