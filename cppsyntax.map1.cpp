@@ -159,6 +159,7 @@ void ifnum(){
  getline(std::cin,num);
   if(select == "i"){
   std::cout << "\n" << t[0] << var << op << num << t[8] << "\n\n";
+  break;
  }else if(select == "e"){
   std::cout << "\n" << t[1] << var << op << num << t[8] << "\n\n";
   break;}
