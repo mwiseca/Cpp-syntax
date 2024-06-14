@@ -32,3 +32,5 @@ A string with no newline character was added.
 check s in choices.
 the uncomment c->second();} option was removed in cppsyntax.map.cpp.
 June 8 2024.
+A new file was added allowing a choice to repeat choices.
+June 14 2024.
