@@ -12,7 +12,7 @@ void choice(){
  cout << "//Enter cy for what's needed to copy and paste to finish a simple program.\n";
  cout << "//Enter s for strings.\n";
  cout << "//Enter c for empty strings.\n";
- cout << "//Enter aa for string arrays.\n";
+ cout << "//Enter aa for string arrays ia for numbers.\n";
  cout << "//Enter i for if statements for strings.\n";
  cout << "//Enter e for else if statements for strings.\n";
  cout << "//Enter in for if and else if statements for numbers.\n";
@@ -96,6 +96,41 @@ int main(){
  if(repeat != "r"){
      break;}  
  }
+}else if(sw == "ia"){
+	std::string a [6] = {"int ","double ", "[","]"," = {","};"};
+	std::string typ;
+	std::string name;
+	std::string num;
+	std::string elements; 
+
+ while(true){
+ std::cout << "//Enter a data type i for int d for double.\n";
+ std::cout << "//";
+ while(std::getline(std::cin,typ)){ 
+ if(typ != "i" && typ != "d"){ 
+ std::cout << "//Enter i or d only.\n";}
+ else{
+     break;}
+ }
+ if(typ == "i"){
+  typ = a[0];
+ }else if(typ == "d"){
+  typ = a[1];}
+  std::cout << "//Enter the name of the array m for main.\n";
+  std::cout << "//";
+ std::getline(std::cin,name);
+ if(name == "m"){
+ break;}
+ std::cout << "//Enter number of elements m for main.\n";
+ std::cout << "//"; 
+ std::getline(std::cin,num);
+ std::cout << "//Enter elements with a comma between them.\n";
+ std::cout << "//";
+ std::getline(std::cin,elements);
+ std::cout << "\n" << typ << name << a[2] << num << a[3] << a[4] << elements << a[5] << "\n\n";
+ if(repeat != "r"){
+     break;}  
+}
 }else if(sw == "i"){
          std::string f  [4] = {"if(", " == ",  "\"", "){"};
    	 std::string name;
