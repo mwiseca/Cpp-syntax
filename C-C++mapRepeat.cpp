@@ -6,7 +6,7 @@
 #include <string>
 #include <map>
 #include <functional>
-                                     
+
 	                         std::string repeat;
                                      
 void choice(){
@@ -14,6 +14,7 @@ void choice(){
  cout << "//Enter ch for choices.\n";
  cout << "//Enter a for strings.\n";
  cout << "//Enter aa for arrays.\n";
+ cout << "//Enter ia for arrays with numbers C C++.\n";
  cout << "//Enter c for strings with no quotation marks.\n";
  cout << "//Enter cy for what's needed to copy and paste to finish a simple program.\n";
  cout << "//Enter i for if statements e for else if for strings.\n";
@@ -105,7 +106,7 @@ void fgetss(){
 
 
 void fgetsStrlen(){
-     std::string f  [6] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
+     std::string f  [5] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
      std::string v;
      std::string  me;
 
@@ -119,7 +120,7 @@ void fgetsStrlen(){
  std::cout << "//";
  getline(std::cin,me);
  std::cout << "\n" << f[0] <<  v << f[1] << me << f[1] << f[2] << "\n";
- std::cout << v << f[3] << v << f[4] << f[5] << "\n\n";
+ std::cout << v << f[3] << v << f[4] << "\n\n";
  if(repeat != "r"){
      break;}
    }
@@ -246,8 +247,6 @@ void ifNumber(){
  getline(std::cin,num);
  if(select == "s"){
   std::cout << "\n" << t[0] << t[2] << t[7] << var << t[8] << op << num << t[9] << "\n\n";
- if(repeat != "r"){
-     break;}
  }else if(select == "i"){
   std::cout << "\n" << t[0] << var << op << num << t[9] << "\n\n";
  if(repeat != "r"){
@@ -380,6 +379,44 @@ void array(){
  if(repeat != "r"){
      break;}
       }
+}
+
+
+void numArray(){
+	std::string a [6] = {"int ","double ", "[","]"," = {","};"};
+	std::string typ;
+	std::string name;
+	std::string num;
+	std::string elements; 
+
+ while(true){
+ std::cout << "//Enter a data type i for int d for double.\n";
+ std::cout << "//";
+ while(std::getline(std::cin,typ)){ 
+ if(typ != "i" && typ != "d"){ 
+ std::cout << "//Enter i or d only.\n";}
+ else{
+     break;}
+ }
+ if(typ == "i"){
+  typ = a[0];
+ }else if(typ == "d"){
+  typ = a[1];}
+  std::cout << "//Enter the name of the array m for main.\n";
+  std::cout << "//";
+ std::getline(std::cin,name);
+ if(name == "m"){
+ break;}
+ std::cout << "//Enter number of elements m for main.\n";
+ std::cout << "//"; 
+ std::getline(std::cin,num);
+ std::cout << "//Enter elements with a comma between them.\n";
+ std::cout << "//";
+ std::getline(std::cin,elements);
+ std::cout << "\n" << typ << name << a[2] << num << a[3] << a[4] << elements << a[5] << "\n\n";
+ if(repeat != "r"){
+     break;}
+         }
 }
 
 
@@ -592,8 +629,6 @@ void scanfHeap(){
  getline(std::cin,name);
  if(ch == "i"){
  std::cout << "\n" << t[0] << t[1] << t[3] << name << t[4] << "\n\n";
- if(repeat != "r"){
-     break;}
 }else if(ch == "d"){
  std::cout << "\n" << t[0] << t[2] << t[3] << name << t[4] << "\n\n";
  if(repeat != "r"){
@@ -679,9 +714,8 @@ void copy(){
  std::cout << "\n";
  std::cout << "return 0;\n";
  std::cout << "}\n";
- std::cout << "\n"; 
-}  
-
+ std::cout << "\n";   
+}
 
 
 void cppStrings(){
@@ -996,7 +1030,7 @@ void copyy(){
  std::cout << "}\n";
  std::cout << "return 0;\n";
  std::cout << "}\n"; 
- std::cout << "\n"; 
+ std::cout << "\n";     
 }
 
 
@@ -1017,6 +1051,7 @@ std::map<std::string, std::function<void()> > f = {
 	 {"v",         variable}, 
 	 {"vv",   variableValue},
 	 {"aa",           array}, 
+	 {"ia",        numArray},
          {"fc",           funct},
 	 {"cf",       callFunct},
          {"h",             heap},
