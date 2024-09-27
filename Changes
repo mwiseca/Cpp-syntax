@@ -9,5 +9,11 @@ September 17 2024.
 Arrays for ints and doubles were added to C-C++ mapRepeat.cpp.
 Check ia in choices.
 September 22 2024.
+A new file was added to the dev branch.
+C-C++ mapRepeat.malloc.cpp.
+Everything in main is C++.
+All the functions are in C and malloc is used
+for user inputs.
+September 27 2024.
 
 
