@@ -1609,6 +1609,8 @@ void mapAccess(){
  text = NULL;
  free(em);
  em = NULL;
+ if(repeat != "r"){
+     break;}
  }else if(strcmp(em, "e")==0){
  printf("//Enter error message.\n");
  printf("//");
