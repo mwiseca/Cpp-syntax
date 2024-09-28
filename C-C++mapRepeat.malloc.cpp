@@ -59,7 +59,7 @@ char string  [3] [15] = {"printf(\"", "\\n","\");"};
     while (1){
     text = (char*)malloc(2000* sizeof(char));
     if(text == NULL){
-        printf("Insufficent memory.\n");
+        printf("Error: Insufficent memory.\n");
 	exit(1);}
     printf("//");
     fgets(text,2000,stdin);
