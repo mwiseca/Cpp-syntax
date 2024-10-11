@@ -15,5 +15,9 @@ Everything in main is C++.
 All the functions are in C and malloc is used
 for user inputs.
 September 27 2024.
+A new file was added C-C++mapRepeat.malloc.C.cpp .
+This file has everything in C except the map and code
+to acces the map. It must be compiled as a C++ file.
+October 11 2024.
 
 
