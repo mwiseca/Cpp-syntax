@@ -17,7 +17,12 @@ for user inputs.
 September 27 2024.
 A new file was added C-C++mapRepeat.malloc.C.cpp .
 This file has everything in C except the map and code
-to acces the map. It must be compiled as a C++ file.
+to access the map. It must be compiled as a C++ file.
 October 11 2024.
+A new file was added C-C++mapRepeat.C .cpp.
+It uses static memory allocation. No malloc.
+The file has everything in C except the map
+and code to access the map.
+October 12 2024.
 
 
