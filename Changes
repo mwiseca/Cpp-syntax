@@ -24,5 +24,10 @@ It uses static memory allocation. No malloc.
 The file has everything in C except the map
 and code to access the map.
 October 12 2024.
+A Python file was added C-C++dict.py. It uses a dictionary to call functions.
+A dictinary in Python is like a map in C++.
+This file does not use a if elif statement to change choices.
+It also has repeat as an option.
+October 19 2024.
 
 
