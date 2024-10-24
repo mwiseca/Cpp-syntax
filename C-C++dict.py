@@ -700,7 +700,7 @@ def mapp():
         elif key_t == "s" and value_t != "s":
             print(b[0] + b[4]   + key + b[4] +  b[5] + b[6] + value + b[1])
             print(b[3] + "\n")
-        if value_t == "s" and key_t != "s":
+        elif value_t == "s" and key_t != "s":
             print(b[0] + key + b[5] + b[6] +  b[4] + value + b[4] + b[1])
             print(b[3] + "\n")
         if repeat != "r":
