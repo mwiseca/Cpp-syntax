@@ -39,7 +39,7 @@ def choice():
     print("//Enter aap for C++ string arrays.")
     print("//Enter ip and ep for if and else if statements in C++")
     print("//Enter up for user input in C++.")
-    print("//Enter mp to start a C++ map.")
+    print("//Enter mp to start a C++ map with one key value pair.")
     print("//Enter ma for map access C++.")
     print("//Enter vp for string variables no value C++.")
     print("//Enter vvp for string variables with a value c++.");
