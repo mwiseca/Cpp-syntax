@@ -21,7 +21,6 @@ void choice(){
  cout << "//Enter in for if and else if statements for numbers C-C++.\n";
  cout << "//Enter im for if and else if statements for numbers if malloc is used.\n";
  cout << "//Enter f for fgets.\n";
- cout << "//Enter fs for fgets with strlen to remove newline character.\n";
  cout << "//Enter s for scanf for strings to allow for white spaces.\n";
  cout << "//Enter sb for scanf basic no white spaces.\n";
  cout << "//Enter si for scanf for integers and doubles.\n";
@@ -84,9 +83,11 @@ void stringEmpty(){
 
 
 void fgetss(){
-      std::string f  [6] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;"};
-      std::string v;
-      std::string me;
+	std::string f  [8] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;","[strlen(",")-1] = '\\0';"};
+	std::string w  [9] = {"while(fgets(", ",", "stdin)){", "[strcspn(","\"\\n", "\")]=0;","[strlen(",")-1] = '\\0';","      "};
+	
+	std::string v;
+        std::string me;
 
  while (true){
  std::cout << "//Enter name of variable m for main.\n";
@@ -99,31 +100,13 @@ void fgetss(){
  getline(std::cin,me);
  std::cout << "\n" << f[0] << v << f[1] << me << f[1] << f[2] << "\n";
  std::cout << v << f[3] << v << f[1] << f[4] << f[5] << "\n\n";
- if(repeat != "r"){
-     break;}
+ std::cout << w[0] << v << w[1] << me << w[1] << w[2] << "\n";
+ std::cout << w[8] << v << w[3] << v << w[1] << w[4] << w[5] << "\n\n";
+ std::cout << f[0] << v << f[1] << me << f[1] << f[2] << "\n";
+ std::cout << v << f[6] << v << f[7] << "\n\n"; 
+    if(repeat != "r"){ 
+     break;} 
      }
-}
-
-
-void fgetsStrlen(){
-     std::string f  [5] = {"fgets(", ",", "stdin);", "[strlen(",")-1] = '\\0';"};
-     std::string v;
-     std::string  me;
-
- while (true){
- std::cout << "//Enter name of variable m for main.\n";
- std::cout << "//"; 
- getline(std::cin,v);
- if(v == "m"){
- break;}
- std::cout << "//Enter the memory to be allocated to the variable.\n";
- std::cout << "//";
- getline(std::cin,me);
- std::cout << "\n" << f[0] <<  v << f[1] << me << f[1] << f[2] << "\n";
- std::cout << v << f[3] << v << f[4] << "\n\n";
- if(repeat != "r"){
-     break;}
-   }
 }
 
 
@@ -1041,7 +1024,6 @@ std::map<std::string, std::function<void()> > f = {
 	 {"a",           string},
 	 {"c",      stringEmpty},
 	 {"f",           fgetss},
-	 {"fs",     fgetsStrlen},
 	 {"s",           scanff},
  	 {"sb",      scanfBasic},
 	 {"i",      ifStatement},
