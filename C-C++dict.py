@@ -86,6 +86,7 @@ def empty_string():
 
 def fgets():
     t = ["fgets(",",","stdin);","[strcspn(",'"\\n"',")]=0;","[strlen(", ")-1] = '\\0';"] 
+    w = ["while(fgets(", ",", "stdin)){", "[strcspn(","\"\\n", "\")]=0;","[strlen(",")-1] = '\\0';","      "]
     while True:
         print("//Enter name of variable m for main.")
         v= input("//")
@@ -97,6 +98,8 @@ def fgets():
             return ""
         print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
         print(v + t[3] +  v  + t[1] +  t[4] + t[5] + "\n")
+        print(w[0] + v + w[1] + ma + w[1] + w[2])
+        print(w[8] + v + w[3] + v + w[1] + w[4] + w[5] + "\n\n")
         print("\n" + t[0] + v + t[1] + ma + t[1] + t[2])
         print(v + t[6] +v + t[7] + "\n")
         if repeat != "r":
@@ -557,7 +560,6 @@ def copy():
     print("\n")
     print("     }")
     print("}")
-    print("\n")
     print("return 0;")
     print("}")
     print("\n")
