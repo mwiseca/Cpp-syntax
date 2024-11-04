@@ -29,5 +29,8 @@ A dictinary in Python is like a map in C++.
 This file does not use a if elif statement to change choices.
 It also has repeat as an option.
 October 19 2024.
+A fgets in a while loop was added to C-C++mapRepeat.cpp and 
+C-C++maprepeat.C.cpp.
+November4 2024.
 
 
