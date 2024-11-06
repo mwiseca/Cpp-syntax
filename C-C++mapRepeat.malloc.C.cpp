@@ -106,6 +106,7 @@ void stringEmpty(){
 
 void fgetss(){
          char f  [8] [15] = {"fgets(", ",", "stdin);", "[strcspn(","\"\\n", "\")]=0;","[strlen(",")-1] = '\\0';"};
+	 char w  [9] [15] = {"while(fgets(", ",", "stdin)){", "[strcspn(","\"\\n", "\")]=0;","[strlen(",")-1] = '\\0';","      "};
      char *v;
      char *me;
 
@@ -131,6 +132,8 @@ void fgetss(){
  me[strcspn(me,"\n")]=0;
  printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
  printf("%s%s%s%s%s%s\n\n", v, f[3], v, f[1], f[4] ,f[5]);
+ printf("%s%s%s%s%s%s\n",w[0], v,w[1],me, w[1],w[2]);
+ printf("%s%s%s%s%s%s%s\n\n",w[8],v,w[3],v,w[1],w[4],w[5]);
  printf("\n%s%s%s%s%s%s\n",f[0], v, f[1],me,f[1],f[2]);
  printf("%s%s%s%s\n\n", v,f[6],v,f[7]);
  free(v);
@@ -1201,7 +1204,6 @@ void copy(){
  printf("\n");
  printf("    }\n");
  printf("}\n");
- printf("\n");
  printf("return 0;\n");
  printf("}\n");
  printf("\n"); 
