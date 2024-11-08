@@ -781,6 +781,12 @@ def copyy():
     print("\n")
     print("#include <map>")
     print("\n")
+    print("#include <cstdio>")
+    print("\n")
+    print("#include <cstring>")
+    print("\n");
+    print("#include <cstdlib>")
+    print("\n")
     print("int main(){")
     print("\n")
     print("while(true){")
