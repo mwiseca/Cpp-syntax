@@ -989,6 +989,12 @@ void copyy(){
  std::cout << "\n";
  std::cout << "#include <map>\n";
  std::cout << "\n";
+ std::cout << "#include <cstdio>\n";
+ std::cout << "\n";
+ std::cout << "#include <cstring>\n";
+ std::cout << "\n";
+ std::cout << "#include <cstdlib>\n";
+ std::cout << "\n";
  std::cout << "int main(){\n";
  std::cout << "\n";
  std::cout << "while(true){\n"; 
