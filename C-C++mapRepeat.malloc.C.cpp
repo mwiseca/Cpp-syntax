@@ -1710,7 +1710,7 @@ void copyy(){
  printf("\n");
  printf("#include <cstdio>\n");
  printf("\n");
- printf("#include <cstring\n");
+ printf("#include <cstring>\n");
  printf("\n");
  printf("#include <cstdlib>\n");
  printf("\n");
