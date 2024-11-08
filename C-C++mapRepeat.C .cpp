@@ -1098,7 +1098,13 @@ void copyy(){
  printf("#include <string>\n");
  printf("\n");
  printf("#include <map>\n");
- printf("\n"); 
+ printf("\n");
+ printf("#include <cstdio>\n");
+ printf("\n");
+ printf("#include <cstring>\n");
+ printf("\n");
+ printf("#include <cstdlib>\n");
+ printf("\n");
  printf("int main(){\n");
  printf("\n");
  printf("while(true){\n");
