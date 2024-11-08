@@ -36,7 +36,7 @@ A fgets in while loop was added to fgets in the python file.
 November4 2004.
 A fgets in a while loop was added to C-C++mapRepeat.malloc.C.cpp.
 November 5 2024.
-Headers were added to cyp. All but C-C++mapRepeat.malloc.cpp were updated.
+Headers were added to cyp. All but C-C++mapRepeat.malloc.cpp was updated.
 They are <cstdio> <cstring> <cstdlib>.
 November 8 2024.
 
