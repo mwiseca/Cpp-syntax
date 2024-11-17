@@ -1,2 +1,6 @@
 The C-C++ branch is for combining C-C++.
 I use this one to do changes to Cstrings and Cpp-syntax.
+New files added. C-C++mapRepeat.C.Cpp, C-C++mapRepeat.cpp 
+and CppCsyntax.malloc.cpp. All except C-C++mapRepeat.cpp
+are almost entirely written in C except for the map and code to run the map.
+Nov 17 2024.
