@@ -3,7 +3,7 @@ A simple program that completes strings if statements user input and more.
 It is best used in a terminal emulator that splits the screen.
 Run the program in one screen build a simple program in the other.
 It can be used to check syntax or copy and paste code to the other side.
-this is best used to help learn C++ syntax. Its not  ment to enhance
+this is best used to help learn C-C++ syntax. Its not  ment to enhance
 productivity.
 
 
