@@ -642,7 +642,7 @@ int main() {
         } else if (sw == "ch") {
             choice();
         } else {
-            std::cout << "//Enter a letter in main.\n";
+            std::cout << "//Enter a letter in choices.\n";
         }
     }
     return 0;
