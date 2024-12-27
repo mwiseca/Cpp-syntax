@@ -7,7 +7,7 @@ this is best used to help learn C++ syntax. Its not  ment to enhance
 productivity.
 
 
-**To Use:**
+## To Use
 First compile the .cpp file. To run the program open the terminal
 and type ./file name  then press enter. Choices will be shown on screen.
 To do a if statement for strings press enter. follow instructions.
