@@ -16,4 +16,4 @@ I will not be accepting pull requests for this.
 
 
 ## Example 
-https://github.com/mwiseca/Cpp-syntax/blob/main/Image/Example.png?raw=true
+
