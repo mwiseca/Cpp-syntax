@@ -16,5 +16,6 @@ I will not be accepting pull requests for this.
 
 
 ## Example 
+**Below is a example of how it works. Click on the image to enlarge.**
 
 ![image](https://github.com/user-attachments/assets/0d788b52-e0fe-4709-88e7-ef39df44eb87)
