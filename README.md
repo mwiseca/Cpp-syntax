@@ -13,3 +13,6 @@ and type ./file name  then press enter. Choices will be shown on screen.
 To do a if statement for strings press enter. follow instructions.
 Everything the program does is in choices.
 I will not be accepting pull requests for this.
+
+
+## Example 
