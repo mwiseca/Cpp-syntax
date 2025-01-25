@@ -16,7 +16,9 @@ void choice() {
     cout << "//Enter mi for string if and else if with 2 conditions.\n";
     cout << "//Enter in for if and else if statements for numbers.\n";
     cout << "//Enter fc for void functions.\n";
-    cout << "//Enter cf to call functions.\n", cout << "//Enter u for user input.\n";
+    cout << "//Enter cf to call functions.\n"; 
+    cout << "//Enter u for user input.\n";
+    cout << "//Enter cb for a function to clear entire input buffer.\n";
     cout << "//Enter mp to start a map with one key value pair.\n";
     cout << "//Enter ma for map access.\n";
     cout << "//Enter v for string variables.\n";
@@ -317,7 +319,6 @@ int main() {
             }
         } else if (sw == "u") {
             std::string f[9] = {"std::", "getline(", "std::cin", ",", ");", "std::cin >> ", ";","while(",")) {"};
-
             std::string v;
 
             while (true) {
@@ -334,6 +335,23 @@ int main() {
                 std::cout << "\nstd::cin.clear();";
                 std::cout << "\nstd::cin.ignore(2000, '\\n');     //Clears input buffer.\n\n";
             }
+        } else if (sw == "cb") {
+            std::string t[5] = {"void ", "(", "){", "}","();"};
+            std::string name;
+
+            while (true) {
+                std::cout << "//Name function m for main.\n";
+                std::cout << "//";
+                getline(std::cin, name);
+                if (name == "m") {
+                    break;
+                }
+                std::cout << "\n" << t[0] << name << t[1] << t[2] << "\n"; 
+	        std::cout << "    std::cin.clear();\n";
+                std::cout << "    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\\n');\n";
+	        std::cout << t[3] << "\n\n";
+	        std::cout << name << t[4] << "\n\n"; 
+            }	
         } else if (sw == "mp") {
             std::string t[8] = {"std::map", "<", "std::string", "int", "double", "> ", ",", " = {"};
             std::string b[7] = {"    {", "},", "}", "};", "\"", ",", " "};
@@ -541,6 +559,8 @@ int main() {
                 std::cout << "#include <string>\n";
                 std::cout << "\n";
                 std::cout << "#include <map>\n";
+		std::cout << "\n";
+		std::cout << "#include <limits>\n";
                 std::cout << "\n";
                 std::cout << "int main() {\n";
                 std::cout << "\n";
