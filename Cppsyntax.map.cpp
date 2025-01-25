@@ -591,7 +591,7 @@ void copy() {
         std::cout << "\n";
         std::cout << "#include <map>\n";
         std::cout << "\n";
-	std::cout << "#include <limits>";
+	std::cout << "#include <limits>\n";
 	std::cout << "\n";
         std::cout << "int main() {\n";
         std::cout << "\n";
