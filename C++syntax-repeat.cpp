@@ -32,7 +32,7 @@ int main() {
     std::string repeat;
 
     std::cout << "\n\n";
-    std::cout << "          copyright 2024 Mitchell E Wise\n";
+    std::cout << "          copyright 2024-2025 Mitchell E Wise\n";
     std::cout << "          SPDX-License-Identifier: Apache-20\n\n\n";
 
     std::cout << "//Enter r to repeat choices enter to not.\n";
