@@ -18,7 +18,9 @@ void choice() {
     cout << "//Enter mi for string if and else if with 2 conditions.\n";
     cout << "//Enter in for if and else if statements for numbers.\n";
     cout << "//Enter fc for void functions.\n";
-    cout << "//Enter cf to call functions.\n", cout << "//Enter u for user input.\n";
+    cout << "//Enter cf to call functions.\n"; 
+    cout << "//Enter u for user input.\n";
+    cout << "//Enter cb for a function to clear entire input buffer.\n";
     cout << "//Enter mp to start a map with one key value pair.\n";
     cout << "//Enter ma for map access.\n";
     cout << "//Enter v for string variables.\n";
@@ -350,6 +352,25 @@ void userInput() {
     }
 }
 
+void clearBuff() {
+    std::string t[5] = {"void ", "(", "){", "}","();"};
+    std::string name;
+
+    while (true) {
+        std::cout << "//Name function m for main.\n";
+        std::cout << "//";
+        getline(std::cin, name);
+        if (name == "m") {
+            break;
+        }
+        std::cout << "\n" << t[0] << name << t[1] << t[2] << "\n"; 
+	std::cout << "    std::cin.clear();\n";
+        std::cout << "    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\\n');\n";
+	std::cout << t[3] << "\n\n";
+        std::cout << name << t[4] << "\n\n";
+    } 
+}
+
 void map() {
     std::string t[8] = {"std::map", "<", "std::string", "int", "double", "> ", ",", " = {"};
     std::string b[7] = {"    {", "},", "}", "};", "\"", ",", " "};
@@ -570,6 +591,8 @@ void copy() {
         std::cout << "\n";
         std::cout << "#include <map>\n";
         std::cout << "\n";
+	std::cout << "#include <limits>";
+	std::cout << "\n";
         std::cout << "int main() {\n";
         std::cout << "\n";
         std::cout << "while(true) {\n";
@@ -617,7 +640,8 @@ int main() {
         {"in",         ifnum},
         {"fc",          func},
         {"cf",      callfunc},
-        {"u",      userInput}, 
+        {"u",      userInput},
+        {"cb",     clearBuff},	
         {"mp",           map},    
         {"ma",     mapAccess}, 
         {"v",       variable},  
