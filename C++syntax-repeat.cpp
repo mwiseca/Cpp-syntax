@@ -14,6 +14,7 @@ void choice() {
     cout << "//Enter i for if statements for strings.\n";
     cout << "//Enter e for else if statements for strings.\n";
     cout << "//Enter mi for string if and else if with 2 conditions.\n";
+	cout << "//Enter min for multi if statements for numbers with 2 conditions.\n";
     cout << "//Enter in for if and else if statements for numbers.\n";
     cout << "//Enter fc for void functions.\n";
     cout << "//Enter cf to call functions.\n"; 
@@ -54,7 +55,7 @@ int main() {
                     break;
                 }
                 std::cout << "\n" << string[0] << text << string[1] << string[2] << "\n\n";
-		std::cout << "\n" << string[0] << string[1] << text << string[1] << string[1] << string[2] << "\n\n";
+		        std::cout << "\n" << string[0] << string[1] << text << string[1] << string[1] << string[2] << "\n\n";
                 std::cout << "\n" << string[0] << text << string[2] << "\n\n";
                 std::cout << "\n" << string[0] << text << string[3] << "\n\n";
                 if (repeat != "r") {
@@ -179,7 +180,7 @@ int main() {
                     break;
                 }
             }
-	} else if (sw == "mi") {
+	    } else if (sw == "mi") {
             std::string t[8] ={"if(","} else if("," == ", " != ","\""," && "," || ",") {"};
             std::string select;
             std::string name;
@@ -191,7 +192,7 @@ int main() {
             std::string scompare;
 
             while (true) {
-	        std::cout << "//Enter i for if, e for else if.\n";
+	            std::cout << "//Enter i for if, e for else if.\n";
                 while (getline(std::cin,select)) {
                 if (select != "i" && select != "e") {
 	            std::cout << "//Enter i or e only.\n";
@@ -204,17 +205,17 @@ int main() {
             } else if (select == "e") {
                 select = t[1];
             }
-	    std::cout << "//Enter a name of first m for main.\n";
-	    std::cout << "//";
+	        std::cout << "//Enter a name of first m for main.\n";
+	        std::cout << "//";
             getline(std::cin,name);
             if (name == "m") {
                 break;
             }
-	    std::cout << "//Enter a value.\n";
-	    std::cout << "//";
+	        std::cout << "//Enter a value.\n";
+	        std::cout << "//";
             getline(std::cin,value);
-	    std::cout << "//Enter a comparison a for equal b for not equal.\n";
-	    std::cout << "//";
+	        std::cout << "//Enter a comparison a for equal b for not equal.\n";
+	        std::cout << "//";
             while (getline(std::cin,compare)) {
                 if (compare != "a" && compare != "b") {
 	            std::cout << "//Enter a or b only.\n";
@@ -227,8 +228,8 @@ int main() {
             } else if (compare == "b") {
                 compare = t[3];
             }
-	    std::cout << "//Enter a operator a for and o for or.\n";
-	    std::cout << "//";
+	        std::cout << "//Enter a operator a for and o for or.\n";
+	        std::cout << "//";
             while (getline(std::cin,op)) {
                 if (op !=  "a" && op != "o") {
 	            std::cout << "//Enter a or o only.\n";
@@ -241,22 +242,22 @@ int main() {
             } else if (op == "o") {
                 op = t[6];
             }
-	    std::cout << "//Enter the second name,\n";
-	    std::cout << "//";
-	    getline(std::cin,sname);
-	    std::cout << "Enter the second value.\n";
-	    std::cout << "//";
-	    getline(std::cin,svalue);
-	    std::cout << "Enter a second comparison a for equal b for not equal\n";
-	    std::cout << "//";
-	    while (getline(std::cin,scompare)) {
+	        std::cout << "//Enter the second name,\n";
+	        std::cout << "//";
+	        getline(std::cin,sname);
+	        std::cout << "Enter the second value.\n";
+	        std::cout << "//";
+	        getline(std::cin,svalue);
+	        std::cout << "Enter a second comparison a for equal b for not equal\n";
+	        std::cout << "//";
+	        while (getline(std::cin,scompare)) {
                 if (scompare != "a" && scompare != "b") {
 	            std::cout << "//Enter a or b only.\n";
                 } else {
                     break;
                 }
             }
-	    if (scompare == "a") {
+	        if (scompare == "a") {
                 scompare = t[2];
             } else if (scompare == "b") {
                 scompare = t[3];
@@ -266,6 +267,101 @@ int main() {
                  break;
             }
             }
+		} else if (sw == "min") {		    
+            std::string t[9] = {"if(", "} else if(",  " <= ", " == "," >= "," != ", " && ", " || ",") {"};
+            std::string select;  
+            std::string name;
+            std::string compare;
+            std::string value;
+            std::string op;
+            std::string sname;
+            std::string scompare;
+            std::string svalue;
+
+            while (true) {
+                std::cout << "//Enter i for if, e for else if.\n";
+                while(getline(std::cin,select)) {
+                    if(select != "i"  && select != "e") {
+                        std::cout << "\n//Enter i or e only.\n\n";
+                    } else {
+                        break;
+                    }
+                }
+                if(select == "i") {
+                    select = t[0];
+                } else if(select == "e") {
+                    select = t[1];
+                }
+                std::cout << "//Enter a name of first m for main.\n";
+                std::cout << "//";
+                getline(std::cin,name);
+                if (name == "m") {
+                    break;
+                }
+                std::cout << "//Enter a comparison a for less or equal b for equal c for greater or equal d for not equal.\n";
+                std::cout << "//";
+                while(getline(std::cin,compare)) {
+                    if (compare != "a" && compare != "b" && compare != "c" && compare != "d") {
+                        std::cout << "\n//Enter a b c or d only.\n\n";
+                    } else {
+                        break;
+                    } 
+                }
+                if (compare == "a") {
+                    compare = t[2];
+                } else if (compare == "b") {
+                    compare = t[3];
+                } else if (compare == "c") {
+                    compare = t[4];
+                } else if (compare == "d") {
+                    compare = t[5]; 
+                }
+                std::cout << "//Enter a value number.\n";
+                std::cout << "//";
+                getline(std::cin, value);
+                std::cout << "//Enter a operator a for and o for or.\n";
+                std::cout << "//";
+                while (getline(std::cin,op)) { 
+                    if (op != "a"  && op != "o") {
+                        std::cout << "\n//Enter a or o only.\n\n";
+                    } else {
+                        break;
+                    }
+                }
+                if (op == "a") {
+                    op = t[6];
+                } else if (op == "o") {
+                    op = t[7];
+                }
+                std::cout << "//Enter the second name,\n";
+                std::cout << "//";
+                getline(std::cin,sname);
+                std::cout << "//Enter a second comparison a for less or equal b for equal c for Greater or equal d for not equal.\n";
+                std::cout << "//";
+                while (getline(std::cin,scompare)) {
+                    if (scompare != "a" && scompare != "b" && scompare != "c" && scompare != "d") {
+                        std::cout << "\n//Enter a  b c or d only.\n\n";
+                    } else {
+                        break;
+                    }
+                } 
+                if (scompare == "a") {
+                    scompare = t[2];
+                } else if (scompare == "b") {
+                    scompare = t[3];
+                } else if (scompare == "c") {
+                    scompare = t[4];
+                } else if (scompare == "d") {
+                    scompare = t[5]; 
+                }  
+                std::cout << "Enter the second value number.\n";
+                std::cout << "//";
+                getline(std::cin,svalue);
+                std::cout << "\n" << select << name << compare << value << op << sname << scompare << svalue << t[8] << "\n\n";
+                if (repeat != "r") {
+                    break;
+                }
+            }			
         } else if (sw == "in") {
             std::string t[9] = {"if(", "} else if(", " <= ", " == ", " >= ", " != ", "(", ")", ") {"};
             std::string select;
