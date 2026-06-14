@@ -421,7 +421,7 @@ void func() {
         std::cout << "//Name function m for main.\n";
         std::cout << "//";
         while(!getline(std::cin, name)) {
-			checkInput() {
+			checkInput();
 		}
         if (name == "m") {
             break;
