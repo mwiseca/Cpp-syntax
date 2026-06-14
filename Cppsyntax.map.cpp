@@ -62,7 +62,7 @@ void estring() {
     while (true) {
         std::cout << "//";
         while(!getline(std::cin, text)) {
-			checkInput() {
+			checkInput(); 
 			}
         if (text == "m") {
             break;
@@ -169,7 +169,7 @@ void elseif() {
         std::cout << "//Enter name of the else if statement m for main.\n";
         std::cout << "//";
         while(!getline(std::cin, name)) {
-			checkInput() {
+			checkInput(); 
 		}
         if (name == "m") {
             break;
