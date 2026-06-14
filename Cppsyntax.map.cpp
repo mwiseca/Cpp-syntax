@@ -6,6 +6,11 @@
 #include <map>
 #include <string>
 
+void checkInput() {
+    std::cerr << "\nInvalid input.\n\n";
+    std::cin.clear();
+}
+
 void choice() {
     using namespace std;
     cout << "//Enter ch for choices.\n";
@@ -36,7 +41,9 @@ void string() {
     std::cout << "//Enter your string, m for main.\n";
     while (true) {
         std::cout << "//";
-        getline(std::cin, text);
+        while(!getline(std::cin, text)) {
+			checkInput();
+		}
         if (text == "m") {
             break;
         }
@@ -54,7 +61,9 @@ void estring() {
     std::cout << "//Enter text m for main.\n";
     while (true) {
         std::cout << "//";
-        getline(std::cin, text);
+        while(!getline(std::cin, text)) {
+			checkInput() {
+			}
         if (text == "m") {
             break;
         }
@@ -70,16 +79,22 @@ void array() {
     while (true) {
         std::cout << "//Enter the name of array m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//Enter the amount of elements.\n";
         std::cout << "//";
-        getline(std::cin, ne);
+        while(!getline(std::cin, ne)) {
+			checkInput();
+		}
         std::cout << "//Enter elements with quotations and commas between each.\n";
         std::cout << "//";
-        getline(std::cin, elements);
+        while(!getline(std::cin, elements)) {
+			checkInput();
+		}
         std::cout << "\n" << t[0] << name << t[1] << ne << t[2] << elements << t[3] << "\n\n";
     }
 }
@@ -130,13 +145,17 @@ void ifstatement() {
     while (true) {
         std::cout << "//Enter name of the if statement m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//Enter the value.\n";
         std::cout << "//";
-        getline(std::cin, value);
+        while(!getline(std::cin, value)) {
+			checkInput();
+		}
         std::cout << "\n" << f[0] << name << f[1] << f[2] << value << f[2] << f[3] << "\n\n";
     }
 }
@@ -149,13 +168,17 @@ void elseif() {
     while (true) {
         std::cout << "//Enter name of the else if statement m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput() {
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//Enter the value.\n";
         std::cout << "//";
-        getline(std::cin, value);
+        while(!getline(std::cin, value)) {
+			checkInput();
+		}
         std::cout << "\n" << f[0] << name << f[1] << f[2] << value << f[2] << f[3] << "\n\n";
     }
 }
@@ -397,13 +420,17 @@ void func() {
     while (true) {
         std::cout << "//Name function m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput() {
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//Enter parameters.\n";
         std::cout << "//";
-        getline(std::cin, per);
+        while(!getline(std::cin, per)) {
+			checkInput();
+		}
         std::cout << "\n" << t[0] << name << t[1] << per << t[2] << "\n\n\n" << t[3] << "\n\n";
     }
 }
@@ -415,13 +442,17 @@ void callfunc() {
     while (true) {
         std::cout << "//Enter the name of function m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//Enter values for parameters.\n";
         std::cout << "//";
-        getline(std::cin, per);
+        while(!getline(std::cin, per)) {
+			checkInput();
+		}
         std::cout << "\n" << name << t[0] << per << t[1] << "\n\n";
     }
 }
@@ -434,7 +465,9 @@ void userInput() {
     while (true) {
         std::cout << "//Enter name of variable m for main.\n";
         std::cout << "//";
-        getline(std::cin, v);
+        while(!getline(std::cin, v)) {
+			checkInput();
+		}
         if (v == "m") {
             break;
         }
@@ -454,7 +487,9 @@ void clearBuff() {
     while (true) {
         std::cout << "//Name function m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
@@ -596,7 +631,9 @@ void variable() {
     while (true) {
         std::cout << "//Enter name of variable m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
@@ -611,13 +648,17 @@ void variableValue() {
     while (true) {
         std::cout << "//Enter a name of variable m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//enter a value\n";
         std::cout << "//";
-        getline(std::cin, value);
+        while(!getline(std::cin, value)) {
+			checkInput();
+		}
         std::cout << "\n" << v[0] << name << v[1] << v[2] << value << v[2] << v[3] << "\n\n";
     }
 }
@@ -658,7 +699,9 @@ void varNoValue() {
     while (true) {
         std::cout << "//Choose i for int d for double, m for main.\n";
         std::cout << "//";
-        getline(std::cin, ch);
+        while(!getline(std::cin, ch)) {
+			checkInput();
+		}
         if (ch == "m") {
             break;
         } else if (ch != "i" && ch != "d") {
@@ -667,7 +710,9 @@ void varNoValue() {
         }
         std::cout << "Enter the name.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (ch == "i") {
             std::cout << "\n" << t[1] << name << t[2] << "\n\n";
         } else if (ch == "d") {
@@ -722,6 +767,7 @@ void copy() {
 }
 
 int main() {
+	std::ios_base::sync_with_stdio(false);
     std::map<std::string, std::function<void()>> f = {
         {"ch",         choice},
         {"cy",           copy}, 
