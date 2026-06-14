@@ -53,6 +53,9 @@ void string() {
 	std::cout << "\n" << string[0] << string[1] << text << string[1] << string[1] << string[2] << "\n\n";
         std::cout << "\n" << string[0] << text << string[2] << "\n\n";
         std::cout << "\n" << string[0] << text << string[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -70,6 +73,9 @@ void estring() {
             break;
         }
         std::cout << "\n" << t[0] << text << t[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -98,6 +104,9 @@ void array() {
 			checkInput();
 		}
         std::cout << "\n" << t[0] << name << t[1] << ne << t[2] << elements << t[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -136,6 +145,9 @@ void numArray() {
         std::cout << "//";
         std::getline(std::cin, elements);
         std::cout << "\n" << typ << name << a[2] << num << a[3] << a[4] << elements << a[5] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -159,6 +171,9 @@ void ifstatement() {
 			checkInput();
 		}
         std::cout << "\n" << f[0] << name << f[1] << f[2] << value << f[2] << f[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -182,6 +197,9 @@ void elseif() {
 			checkInput();
 		}
         std::cout << "\n" << f[0] << name << f[1] << f[2] << value << f[2] << f[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -268,7 +286,10 @@ void multiIf(){
         } else if (scompare == "b") {
             scompare = t[3];
         } 
-        std::cout << "\n" << select << name << compare << t[4] << value << t[4] << op << sname << scompare << t[4] << svalue << t[4] << t[7] << "\n\n";    
+        std::cout << "\n" << select << name << compare << t[4] << value << t[4] << op << sname << scompare << t[4] << svalue << t[4] << t[7] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -363,6 +384,9 @@ void multiIfNumber() {
         std::cout << "//";
         getline(std::cin,svalue);
         std::cout << "\n" << select << name << compare << value << op << sname << scompare << svalue << t[8] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
 	}
 }
 
@@ -408,8 +432,14 @@ void ifnum() {
         getline(std::cin, num);
         if (select == "i") {
             std::cout << "\n" << t[0] << var << op << num << t[8] << "\n\n";
+			if (repeat != "r") {
+                break;
+            }
         } else if (select == "e") {
             std::cout << "\n" << t[1] << var << op << num << t[8] << "\n\n";
+		    if (repeat != "r") {
+                break;
+            }
         }
     }
 }
@@ -434,6 +464,9 @@ void func() {
 			checkInput();
 		}
         std::cout << "\n" << t[0] << name << t[1] << per << t[2] << "\n\n\n" << t[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -456,6 +489,9 @@ void callfunc() {
 			checkInput();
 		}
         std::cout << "\n" << name << t[0] << per << t[1] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -479,6 +515,9 @@ void userInput() {
         std::cout << "\n" << f[5] << v << f[6] << "\n\n";
         std::cout << "\nstd::cin.clear();";
         std::cout << "\nstd::cin.ignore(2000, '\\n');     //Clears input buffer.\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -500,6 +539,9 @@ void clearBuff() {
         std::cout << "    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\\n');\n";
 	std::cout << t[3] << "\n\n";
         std::cout << name << t[4] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     } 
 }
 
@@ -575,6 +617,9 @@ void map() {
             std::cout << value << b[1] << "\n";
         }
         std::cout << b[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -621,6 +666,9 @@ void mapAccess() {
             std::cout << string[0] << text << string[1] << string[2] << "\n\n";
             std::cout << "}catch(std::out_of_range){" << "\n";
             std::cout << string[0] << text << string[3] << "\n\n";
+			if (repeat != "r") {
+                break;
+            }
         }
     }
 }
@@ -640,6 +688,9 @@ void variable() {
             break;
         }
         std::cout << "\n" << f[0] << name << f[1] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -662,6 +713,9 @@ void variableValue() {
 			checkInput();
 		}
         std::cout << "\n" << v[0] << name << v[1] << v[2] << value << v[2] << v[3] << "\n\n";
+		if (repeat != "r") {
+            break;
+        }
     }
 }
 
@@ -688,8 +742,14 @@ void variableNum() {
         getline(std::cin, value);
         if (ch == "i") {
             std::cout << "\n" << t[1] << name << t[2] << value << t[3] << "\n\n";
+			if (repeat != "r") {
+                break;
+            }
         } else if (ch == "d") {
             std::cout << "\n" << t[0] << name << t[2] << value << t[3] << "\n\n";
+			if (repeat != "r") {
+                break;
+            }
         }
     }
 }
@@ -717,8 +777,14 @@ void varNoValue() {
 		}
         if (ch == "i") {
             std::cout << "\n" << t[1] << name << t[2] << "\n\n";
+			if (repeat != "r") {
+                break;
+            }
         } else if (ch == "d") {
             std::cout << "\n" << t[0] << name << t[2] << "\n\n";
+			if (repeat != "r") {
+                break;
+            }
         }
     }
 }
