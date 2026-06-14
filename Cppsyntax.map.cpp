@@ -3,8 +3,10 @@
 
 #include <functional>
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
+
+std::string repeat;
 
 void checkInput() {
     std::cerr << "\nInvalid input.\n\n";
@@ -768,7 +770,7 @@ void copy() {
 
 int main() {
 	std::ios_base::sync_with_stdio(false);
-    std::map<std::string, std::function<void()>> f = {
+	std::unordered_map<std::string, void(*)()> f = {
         {"ch",         choice},
         {"cy",           copy}, 
         {"s",          string},
@@ -793,21 +795,29 @@ int main() {
     };
 
     std::string sw;
+
+    std::cout << "\n\n";
+    std::cout << "          copyright 2024-2026 Mitchell E Wise\n";
+    std::cout << "          SPDX-License-Identifier: Apache-20\n\n\n";
+
+    std::cout << "//Enter r to repeat choices enter to not.\n";
+    std::getline(std::cin, repeat);
+
     choice();
     while (true) {
-        std::cout << "//Enter a selection from choices x to exit ch for choices.\n";
-        std::cout << "//";
-        std::getline(std::cin, sw);
-        if (sw == "x") {
-            break;
-        }
-        auto c = f.find(sw);
-        if (c != f.end()) {
-            (*c).second();
-        } else if (c == f.end()) {
-            std::cout << "//Enter a letter in choices\n\n";
+		try {
+            std::cout << "//Enter a selection from choices x to exit ch for choices.\n";
+            std::cout << "//";
+            std::getline(std::cin, sw);
+            if (sw == "x") {
+                break;
+            }
+            f.at(sw)();
+        }catch(std::out_of_range){
+            std::cout << "\nKey error: Enter a name in choices.\n\n";
         }
     }
     return 0;
 }
+
 
