@@ -633,17 +633,23 @@ void mapAccess() {
     while (true) {
         std::cout << "//Enter the name of the map m for main.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         if (name == "m") {
             break;
         }
         std::cout << "//Enter the name of the variable.\n";
         std::cout << "//";
-        getline(std::cin, var);
+        while(!getline(std::cin, var)) {
+			checkInput();
+		}
         std::cout << "To enter a key error message for exception press e.\n";
         std::cout << "//Press enter to not enter a error message.\n";
         std::cout << "//";
-        getline(std::cin, em);
+        while(!getline(std::cin, em)) {
+			checkInput();
+		}
         if (em != "e") {
             std::cout << "\n" << t[0] << name << t[5] << var << t[6] << t[3] << "\n\n";
             std::cout << "\n" << t[0] << name << t[7] << var << t[8] << t[3] << "\n\n";
@@ -654,10 +660,15 @@ void mapAccess() {
                       << "try{" << "\n\n";
             std::cout << "\n"
                       << "}catch(std::out_of_range){" << "    //For map key error.\n\n";
+            if (repeat != "r") {
+                break;
+            }	
         } else if (em == "e") {
             std::cout << "//Enter error message.\n";
             std::cout << "//";
-            getline(std::cin, text);
+            while(!getline(std::cin, text)) {
+				checkInput();
+			}
             std::cout << "\n" << t[0] << name << t[5] << var << t[6] << t[3] << "\n\n";
             std::cout << "\n }" << "\n\n";
             std::cout << "\n"
@@ -727,7 +738,9 @@ void variableNum() {
     while (true) {
         std::cout << "//Choose i for int d for double, m for main.\n";
         std::cout << "//";
-        getline(std::cin, ch);
+        while(!getline(std::cin, ch)) {
+			checkInput();
+		}
         if (ch == "m") {
             break;
         } else if (ch != "i" && ch != "d") {
@@ -736,10 +749,14 @@ void variableNum() {
         }
         std::cout << "Enter the name.\n";
         std::cout << "//";
-        getline(std::cin, name);
+        while(!getline(std::cin, name)) {
+			checkInput();
+		}
         std::cout << "Enter a value.\n";
         std::cout << "//";
-        getline(std::cin, value);
+        while(!getline(std::cin, value)) {
+			checkInput();
+		}
         if (ch == "i") {
             std::cout << "\n" << t[1] << name << t[2] << value << t[3] << "\n\n";
 			if (repeat != "r") {
@@ -867,14 +884,17 @@ int main() {
     std::cout << "          SPDX-License-Identifier: Apache-20\n\n\n";
 
     std::cout << "//Enter r to repeat choices enter to not.\n";
-    std::getline(std::cin, repeat);
-
+    while(!getline(std::cin, repeat)) {
+		checkInput();
+	}
     choice();
     while (true) {
 		try {
             std::cout << "//Enter a selection from choices x to exit ch for choices.\n";
             std::cout << "//";
-            std::getline(std::cin, sw);
+            while(!getline(std::cin, sw)) {
+				checkInput();
+			}
             if (sw == "x") {
                 break;
             }
