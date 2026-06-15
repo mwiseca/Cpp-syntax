@@ -277,7 +277,7 @@ void multiIf(){
 	std::cout << "//";
 		while(true) {
             if (!getline(std::cin,op)) {
-				checkInput() {
+				checkInput();
 				continue;
 			}
             if (op !=  "a" && op != "o") {
