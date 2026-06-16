@@ -121,7 +121,7 @@ void numArray() {
         std::cout << "//Enter a data type i for int d for double.\n";
         std::cout << "//";
 		while(true) {
-            if (!std::getline(std::cin, typ)) {
+            if (!getline(std::cin, typ)) {
 			    checkInput();
 			    continue;
 		    }
