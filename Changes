@@ -54,3 +54,6 @@ Check min in choices.
 January 22 2026.
 Added error checking for getline. map was changed to unordered map Cppsyntax.map.cpp.
 june 16 2026.
+C++syntax-repeat.cpp was deleted. C++syntax.cpp was renamed  C++syntaxBasic.cpp.
+Cppsyntax.map.cpp was renamed CppSyntax.cpp. It still uses a map and the repeat feature was added.
+June 16 2026.
