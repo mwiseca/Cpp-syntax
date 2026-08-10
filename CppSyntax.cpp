@@ -604,7 +604,8 @@ void checkGetline() {
         if (v == "m") {
             break;
         }
-        std::cout << "Enter a error message.\n";
+        std::cout << "//Enter a error message.\n";
+		std::cout << "//";
         while(!getline(std::cin,error)) {
             checkInput();
         } 
