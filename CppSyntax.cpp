@@ -28,6 +28,7 @@ void choice() {
     cout << "//Enter fc for void functions.\n";
     cout << "//Enter cf to call functions.\n"; 
     cout << "//Enter u for user input.\n";
+	cout << "//Enter cg for C++ getline with error checking.\n";
     cout << "//Enter cb for a function to clear entire input buffer.\n";
     cout << "//Enter mp to start a map with one key value pair.\n";
     cout << "//Enter ma for map access.\n";
@@ -588,6 +589,43 @@ void userInput() {
     }
 }
 
+void checkGetline() {
+    std::string f[9] = {"while(true) {","if(!getline(","while(!getline(", "std::cin", ",", ");", ";",")) {","    "};
+    std::string string[4] = {"    ","std::cout << \"", "\\n", "\";"};
+    std::string v;
+    std::string error;
+
+    while (true) {
+        std::cout << "//Enter name of variable m for main.\n";
+        std::cout << "//";
+        while(!getline(std::cin,v)) {
+            checkInput();
+        }
+        if (v == "m") {
+            break;
+        }
+        std::cout << "//Enter a error message.\n";
+		std::cout << "//";
+        while(!getline(std::cin,error)) {
+            checkInput();
+        } 
+        std::cout << "\n" << f[2] << f[3] << f[4] << v << f[7] << "\n"; 
+        std::cout <<string[0] << string[1] << string[2] << error <<  string[2] << string[2] <<  string[3] << "\n";
+        std::cout << "    std::cin.clear();\n";
+        std::cout << "}\n\n";
+        std::cout << "\n" << f[0] << "\n";
+        std::cout << f[8] << f[1] << f[3] << f[4] << v << f[7] << "\n"; 
+        std::cout << f[8] << string[0] << string[1] << string[2] << error <<  string[2] << string[2] << string[3] << "\n";
+        std::cout << "        std::cin.clear();\n";
+        std::cout << "        continue;\n";
+        std::cout << "    }\n\n";
+        std::cout << "std::ios_base::sync_with_stdio(false);        //This must be placed just below main for std::cin.clear(); to clear all errors.\n\n";
+        if (repeat != "r") {
+            break;
+        }
+    }
+}
+
 void clearBuff() {
     std::string t[5] = {"void ", "(", "){", "}","();"};
     std::string name;
@@ -919,6 +957,8 @@ void copy() {
         std::cout << "\n";
         std::cout << "try {\n";
         std::cout << "\n";
+		std::cout << "std::ios_base::sync_with_stdio(false);\n";
+		std::cout << "\n";
         std::cout << "}catch(std::out_of_range){\n";
         std::cout << "\n";
         std::cout << "    }\n";
@@ -951,6 +991,7 @@ int main() {
         {"fc",           func},
         {"cf",       callfunc},
         {"u",       userInput},
+	    {"cg",   checkGetline},
         {"cb",      clearBuff},	
         {"mp",            map},    
         {"ma",      mapAccess}, 

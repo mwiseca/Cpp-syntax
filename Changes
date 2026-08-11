@@ -57,3 +57,6 @@ june 16 2026.
 C++syntax-repeat.cpp was deleted. C++syntax.cpp was renamed  C++syntaxBasic.cpp.
 Cppsyntax.map.cpp was renamed CppSyntax.cpp. It still uses a map and the repeat feature was added.
 June 16 2026.
+A getline with error checking has been added to CppSyntax.cpp.
+Check cg in choices.
+August 11 2026.
