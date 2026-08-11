@@ -59,3 +59,4 @@ Cppsyntax.map.cpp was renamed CppSyntax.cpp. It still uses a map and the repeat 
 June 16 2026.
 A getline with error checking has been added to CppSyntax.cpp.
 Check cg in choices.
+August 11 2026.
