@@ -30,7 +30,7 @@ void choice() {
     cout << "//Enter u for user input.\n";
 	cout << "//Enter cg for C++ getline with error checking.\n";
     cout << "//Enter cb for a function to clear entire input buffer.\n";
-    cout << "//Enter mp to start a map with one key value pair.\n";
+    cout << "//Enter mp to create a map with up to 10 key value pairs.\n";
     cout << "//Enter ma for map access.\n";
     cout << "//Enter v for string variables.\n";
     cout << "//Enter vv for string variables to assign a value.\n";
