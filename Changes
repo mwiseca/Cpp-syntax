@@ -60,3 +60,6 @@ June 16 2026.
 A getline with error checking has been added to CppSyntax.cpp.
 Check cg in choices.
 August 11 2026.
+The map choice has been updated from one key value pair to up to 10 for CppSyntax.cpp.
+Check mp in choices.
+August 30 2026.
