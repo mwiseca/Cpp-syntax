@@ -131,9 +131,11 @@ void numArray() {
 
     std::cout << "//Enter a data type i for int d for double.\n";
     std::cout << "//";
-    
-    while (!getline(std::cin,typ)) {
-        std::cin.clear();    
+    while(true) {
+        if (!getline(std::cin,typ)) {
+            checkInput();
+			continue;
+		}
         if (typ != "i" && typ != "d") {
             std::cout << "//Enter i or d.\n";
         } else {
